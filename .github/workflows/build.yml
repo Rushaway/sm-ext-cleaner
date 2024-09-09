@@ -29,13 +29,10 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - ubuntu-latest
           - ubuntu-20.04
-          - windows-latest
 
         sm_version:
           - "latest"
-          - "1.11"
 
         include:
           - mm_version: "latest"
@@ -43,12 +40,6 @@ jobs:
 
           - sm_version: "latest"
             sm_branch: "master"
-
-          - sm_version: "1.11"
-            sm_branch: "1.11-dev"
-
-          - os: ubuntu-latest
-            os_short: linux
 
           - os: ubuntu-20.04
             os_short: oldlinux
